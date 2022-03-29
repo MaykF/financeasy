@@ -1,11 +1,12 @@
+import React from 'react'
 import './App.css';
+import Login from '../src/pages/login/login.js'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        Financeasy
-      </h1>
+        <Login />
     </div>
   );
 }
