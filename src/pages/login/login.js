@@ -3,6 +3,8 @@ import './login.css';
 import { Link} from "react-router-dom";
 import logo from '../../icons/imagem-login2.png';
 import { MdEmail, MdLock } from "react-icons/md";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FcGoogle} from "react-icons/fc";
 import { HiEye, HiEyeOff} from "react-icons/hi";
 
 export default () => {
@@ -61,17 +63,26 @@ export default () => {
                     </div>
 
                     
-                    <Link to="/home">
+                    <Link to="/home" id="button_login">
                         <button type="submit">
                             Entrar
                         </button>
                     </Link>
 
-                    <h4>Não tem conta?</h4>
+                    <div className='login_google'> 
+                        <FcGoogle className="google_icon"/> Fazer login com o Google
+                    </div>
+                    <div className='login_facebook'>
+                        <FaFacebookSquare className='facebook_icon'/> Fazer login com o Facebook
+                    </div>
 
-                    <button type='submit'>
-                        Cadastrar
-                    </button>
+                    <h4>Não tem conta?</h4>
+                    
+                    <Link to="/cadastrar" id="button_login">
+                        <button type='submit'>
+                            Cadastrar
+                        </button>
+                    </Link>
                     
                 </div>
             </div>

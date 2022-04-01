@@ -23,7 +23,6 @@
     align-items: center;
     margin-left: 50px;
     padding: 20px;
-    width: 500px;
     height: 500px;
 }
 
@@ -98,8 +97,8 @@
     font-size: 25px;
 }
 
-.login-right button{
-    width: 98%;
+.login-right #button_login{
+    width: 100%;
     background-color: #18181b;
     color: #dfdfdf;
     font-weight: 800;
@@ -111,6 +110,15 @@
     outline-width: 0;
 }
 
+.login-right button{
+    background-color: #18181b;
+    color: #dfdfdf;
+    font-weight: 800;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+}
+
 .login-right button:hover{
     color: #28aefc;
     background-color: #1f1e1e;
@@ -119,4 +127,42 @@
 
 .login-eye{
     margin-right: 5px;
+}
+
+.login_google{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #18181b;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.google_icon{
+    margin-right: 5px;
+    height: 25px;
+}
+
+.login_facebook{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #18181b;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.facebook_icon{
+    margin-right: 5px;
+    height: 25px;
 }
