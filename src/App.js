@@ -1,13 +1,25 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
-import Login from '../src/pages/login/login.js'
+import { BrowserRouter as Router, Link, Routes, Route} from "react-router-dom";
+import Home from './pages/home/Home';
+import Login from './pages/login/login';
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        <Login />
-    </div>
+    <Router>
+      <div className='App'>
+
+        <h1>Oi</h1>
+        <Link to="/home">Home</Link>
+
+        <Routes>
+          <Route path="/" caseSensitive={false} element={<Login/>}/>
+          <Route path="/home" caseSensitive={false} element={<Home/>}/>  
+        </Routes> 
+
+      </div>
+    </Router>
   );
 }
 
