@@ -1,4 +1,9 @@
-import React from 'react';
+//INSTALAR LIBS
+//REACT-ROUTER-DOM
+//FIREBASE
+//STYLED COMPONENTS
+
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/home/Home';
@@ -7,6 +12,25 @@ import Cadastrar from './pages/cadastrar/Cadastrar'
 
 
 const App = () => {
+
+  const [user, setUser] = useState(null);
+
+  const actionLoginDataGoogle = async (u) => {
+    let newUser = {
+      id: u.uid,
+      name: u.displayName
+    }
+
+    setUser(newUser)
+  }
+  
+  if(user === null){
+    return(
+      <Router><Login onReceiveGoogle={actionLoginDataGoogle}/></Router>
+    );
+  }
+  
+
   return (
     <Router>
       <div className='App'>
