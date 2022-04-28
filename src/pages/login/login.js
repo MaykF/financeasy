@@ -8,9 +8,6 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FcGoogle} from "react-icons/fc";
 import { HiEye, HiEyeOff} from "react-icons/hi";
 import Api from '../../Api';
-import Home from '../home/Home';
-import Login from '../login/login';
-import Loginlogo from './login-logo';
 
 export default ({onReceiveGoogle}) => {
     const [email, setEmail] = useState("")
@@ -20,7 +17,7 @@ export default ({onReceiveGoogle}) => {
 
     const ActionLoginGoogle = async () =>{
         let result = await Api.googleLogar();
-
+        
         if(result){
             onReceiveGoogle(result.user);
         }else{
