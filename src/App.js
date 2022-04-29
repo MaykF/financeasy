@@ -21,28 +21,24 @@ const App = () => {
       name: u.displayName
     }
 
-    setUser(newUser)
+    setUser(newUser);
   }
   
-  if(user === null){
+  if(user != null){
     return(
-      <Router><Login onReceiveGoogle={actionLoginDataGoogle}/></Router>
+      <Route><Login onReceiveGoogle={actionLoginDataGoogle}/></Route>
     );
   }
   
 
   return (
     <Router>
-      <div className='App'>
-
         <Routes>
           <Route path="/" caseSensitive={false} element={<Login/>}/>
           <Route path="/login" caseSensitive={false} element={<Login/>}/>
           <Route path="/cadastrar" caseSensitive={false} element={<Cadastrar/>}/>
           <Route path="/home" caseSensitive={false} element={<Home/>}/>  
         </Routes> 
-
-      </div>
     </Router>
   );
 }
